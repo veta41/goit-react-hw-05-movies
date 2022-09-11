@@ -1,11 +1,8 @@
 import styled from 'styled-components';
-//---------------------------------------//
+import { NavLink } from 'react-router-dom';
+import { MdImageSearch } from 'react-icons/md';
 
 const SearchHeader = styled.div`
-  top: 0;
-  left: 0;
-  position: sticky;
-  z-index: 1100;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,7 +11,7 @@ const SearchHeader = styled.div`
   padding-left: 24px;
   padding-top: 12px;
   padding-bottom: 12px;
-  color: #fff;
+  flex-direction: column;
   background-color: transparent;
 `;
 const SearchForm = styled.form`
@@ -25,14 +22,18 @@ const SearchForm = styled.form`
   background-color: #fff;
   border-radius: 3px;
   overflow: hidden;
+  &:hover {
+    box-shadow: 0 0 13px 3px #7bd4eb;
+  }
 `;
 
 const SearchBtn = styled.button`
   display: inline-block;
-  width: 37px;
-  height: 37px;
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/OOjs_UI_icon_search-ltr.svg/1200px-OOjs_UI_icon_search-ltr.svg.png');
-  background-size: 40%;
+  width: 48px;
+  height: 48px;
+  border: 0;
+
+  background-size: 70%;
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.6;
@@ -41,28 +42,15 @@ const SearchBtn = styled.button`
   outline: none;
   &:hover {
     opacity: 1;
-    background-color: blue;
-    border-color: white;
-    color: white;
   }
 `;
-const SearchLabel = styled.label`
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  clip-path: inset(50%);
-  border: 0;
-`;
+
 const SearchInput = styled.input`
   display: inline-block;
   width: 100%;
   font: inherit;
   font-size: 20px;
-  padding: 5px;
+  border: none;
   outline: none;
   padding-left: 4px;
   padding-right: 4px;
@@ -72,4 +60,27 @@ const SearchInput = styled.input`
   }
 `;
 
-export { SearchHeader, SearchBtn, SearchForm, SearchLabel, SearchInput };
+export const TextStyled = styled.p`
+  font-size: 30px;
+  text-align: center;
+`;
+
+export const NavLinkSeachBar = styled(NavLink)`
+  display: inline-block;
+  text-decoration: none;
+  color: #7bd4eb;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 1px #7bd4eb;
+`;
+
+export const Icon = styled(MdImageSearch)`
+  width: 35px;
+  height: 35px;
+  fill: #7bd4eb;
+`;
+
+export { SearchHeader, SearchBtn, SearchForm, SearchInput };

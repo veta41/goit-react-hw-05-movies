@@ -10,6 +10,6 @@ export const Title = styled.h1`
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 10px;
+  color: #000000;
   text-align: center;
 `;

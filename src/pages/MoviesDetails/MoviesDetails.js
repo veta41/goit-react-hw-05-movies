@@ -1,19 +1,18 @@
 import { useState, useEffect } from 'react';
-import { Outlet, Link, useLocation } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 // import { Header } from '../../components/Header/Header';
 
 import { getMovieDetails } from '../../servises/Api';
-// import {
-//   MovieCard,
-//   MovieInfo,
-//   MovieLink,
-//   MovieH2,
-//   MovieH3,
-// } from '../MoviesDetails/MoviesDetails.styled';
-// import { NotFoundPage } from '../NotFoundPage';
+
 import BackButton from 'components/BackButton/BackButton';
 import { MovieCard } from 'components/MovieCard/MovieCard';
+import { Header } from 'components/Header/Header';
+import {
+  MovieItemDetails,
+  MovieLink,
+  MovieListDetails,
+} from './MoviesDetails.styled';
 
 export default function MovieDetails() {
   const [movie, setMovie] = useState(null);
@@ -31,19 +30,22 @@ export default function MovieDetails() {
     <>
       <BackButton />
       {movie && <MovieCard movie={movie} />}
-      <hr />
-      <ul>
-        <li>
-          <Link state={location.state} to="cast">
-            Cast
-          </Link>
-        </li>
-        <li>
-          <Link state={location.state} to="reviews">
-            Review
-          </Link>
-        </li>
-      </ul>
+
+      <MovieListDetails>
+        <Header text="Additional information" />
+        <MovieItemDetails>
+          <li>
+            <MovieLink state={location.state} to="cast">
+              Cast
+            </MovieLink>
+          </li>
+          <li>
+            <MovieLink state={location.state} to="reviews">
+              Review
+            </MovieLink>
+          </li>
+        </MovieItemDetails>
+      </MovieListDetails>
       <Outlet />
     </>
   );

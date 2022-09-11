@@ -18,7 +18,7 @@ export const ReviewsCard = styled.div`
 
 export const ReviewsTitle = styled.h3`
   font-weight: bold;
-  color: #de14b9;
+  color: #eb8015;
 `;
 
 export const ReviewsDescription = styled.p`

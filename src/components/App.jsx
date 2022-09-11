@@ -7,6 +7,7 @@ import { Navigation } from './Navigation/Navigation';
 
 import  Cast  from './Cast/Cast';
 import  {Reviews}  from './Reviews/Reviews';
+import { Loader } from './Loader/Loader';
 
 
 const NotFound = lazy(() => import('../pages/NotFoundPage/NotFoundPage'));
@@ -24,7 +25,7 @@ export const App = () => {
           <Route
             index
             element={
-              <Suspense fallback={<h2>Loading ...</h2>}>
+              <Suspense fallback={<Loader/>}>
                 <Home />
               </Suspense>
             }
@@ -32,7 +33,7 @@ export const App = () => {
           <Route
             path="/goit-react-hw-05-movies/movies"
             element={
-              <Suspense fallback={<h2>Loading ...</h2>}>
+              <Suspense fallback={<Loader/>}>
                 <Searchbar />
               </Suspense>
             }
@@ -40,7 +41,7 @@ export const App = () => {
           <Route
             path="/goit-react-hw-05-movies/movies/:movieId"
             element={
-              <Suspense fallback={<h2>Loading ...</h2>}>
+              <Suspense fallback={<Loader/>}>
                 <MoviesDetails />
               </Suspense>
             }
@@ -53,7 +54,7 @@ export const App = () => {
         <Route
           path="*"
           element={
-            <Suspense fallback={<h2>Loading ...</h2>}>
+            <Suspense fallback={<Loader/>}>
               <NotFound />
             </Suspense>
           }

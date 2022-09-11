@@ -1,3 +1,4 @@
+import { Header } from 'components/Header/Header';
 import { MoviesList } from 'components/MoviesList/MoviesList';
 import { useState, useEffect } from 'react';
 
@@ -12,5 +13,10 @@ export default function Home() {
     });
   }, []);
 
-  return <MoviesList moviesList={movies} />;
+  return (
+    <>
+      <Header text="TRENDING TODAY" />
+      <MoviesList moviesList={movies} />
+    </>
+  );
 }

@@ -3,14 +3,17 @@ import {
   SearchHeader,
   SearchBtn,
   SearchForm,
-  SearchLabel,
+  Icon,
   SearchInput,
+  NavLinkSeachBar,
+  TextStyled,
 } from './Searchbar.styled';
 
 import { useSearchParams } from 'react-router-dom';
 import { getSearchMovies } from '../../servises/Api';
 
 import { MoviesList } from '../../components/MoviesList/MoviesList';
+import { Header } from 'components/Header/Header';
 //---------------------------------------------//
 
 export default function Searchbar() {
@@ -43,9 +46,10 @@ export default function Searchbar() {
   return (
     <>
       <SearchHeader>
+        <Header text="SEARCH MOVIES" />
         <SearchForm onSubmit={handlerSubmit}>
           <SearchBtn type="submit">
-            <SearchLabel>Search</SearchLabel>
+            <Icon />
           </SearchBtn>
 
           <SearchInput
@@ -62,7 +66,12 @@ export default function Searchbar() {
       {searchFilmList?.length ? (
         <MoviesList moviesList={searchFilmList} />
       ) : (
-        <></>
+        <TextStyled>
+          Oooops, page not found
+          <NavLinkSeachBar to="/goit-react-hw-05-movies/">
+            to Home
+          </NavLinkSeachBar>
+        </TextStyled>
       )}
     </>
   );

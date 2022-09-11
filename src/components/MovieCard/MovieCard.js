@@ -1,6 +1,13 @@
-import { Card, Desc, Img } from './MovieCard.styled';
+import {
+  Card,
+  Desc,
+  Img,
+  MovieDetail,
+  MovieH2,
+  MovieH3,
+} from './MovieCard.styled';
 import { PropTypes } from 'prop-types';
-//---------------------------------------------//
+
 export const MovieCard = ({ movie }) => {
   const {
     poster_path,
@@ -24,14 +31,16 @@ export const MovieCard = ({ movie }) => {
         />
       </div>
       <Desc>
-        <h2>
+        <MovieH2>
           {title ? title : name} ({release_date.slice(0, 4)})
-        </h2>
-        <p>Use Score: {Math.round((vote_average / 10) * 100)}%</p>
-        <h3>Overwiew</h3>
-        <p>{overview}</p>
-        <h3>Genres</h3>
-        <p>{genres.map(item => item.name).join(' ,')}</p>
+        </MovieH2>
+        <MovieDetail>
+          Use Score: {Math.round((vote_average / 10) * 100)}%
+        </MovieDetail>
+        <MovieH3>Overwiew</MovieH3>
+        <MovieDetail>{overview}</MovieDetail>
+        <MovieH3>Genres</MovieH3>
+        <MovieDetail>{genres.map(item => item.name).join(' ,')}</MovieDetail>
       </Desc>
     </Card>
   );

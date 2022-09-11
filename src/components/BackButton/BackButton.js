@@ -6,7 +6,7 @@ export default function BackButton() {
   const location = useLocation();
   return (
     <Btn type="button" to={location?.state?.from ?? '/'}>
-      Back
+      Go Back
     </Btn>
   );
 }
