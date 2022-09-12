@@ -63,6 +63,7 @@ const SearchInput = styled.input`
 export const TextStyled = styled.p`
   font-size: 30px;
   text-align: center;
+  height: 500px;
 `;
 
 export const NavLinkSeachBar = styled(NavLink)`

@@ -3,9 +3,9 @@ import { BsGithub } from 'react-icons/bs';
 
 export const FooterContainer = styled.footer`
   display: flex;
-  background-color: #6b6967;
-  margin: 0 auto;
-  padding: 0 16px;
+
+  /* margin: 0 auto; */
+  /* padding: 0 16px; */
 `;
 
 export const FooterData = styled.div`

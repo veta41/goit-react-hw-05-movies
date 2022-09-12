@@ -6,6 +6,7 @@ export const Container = styled.div`
   padding: 0 16px;
   background-color: #6b6967;
 `;
+
 export const Header = styled.header`
   display: flex;
   align-items: center;

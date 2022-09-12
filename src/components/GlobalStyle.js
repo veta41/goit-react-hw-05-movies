@@ -18,7 +18,10 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 
-  ul { list-style: none; }
+  ul { 
+    list-style: none;
+    margin: 0; 
+ }
 
   a{text-decoration: none;}
 `;

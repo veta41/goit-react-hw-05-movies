@@ -1,9 +1,9 @@
 import { Outlet } from 'react-router-dom';
-import { Container, Header, Link, List } from './Navigation.styled';
+import { Header, Link, List } from './Navigation.styled';
 
 export const Navigation = () => {
   return (
-    <Container>
+    <>
       <Header>
         <nav>
           <List>
@@ -27,6 +27,6 @@ export const Navigation = () => {
         </nav>
       </Header>
       <Outlet />
-    </Container>
+    </>
   );
 };

@@ -9,6 +9,7 @@ import  Cast  from './Cast/Cast';
 import  {Reviews}  from './Reviews/Reviews';
 import { Loader } from './Loader/Loader';
 import Footer from './Footer/Footer';
+import { Container } from './Navigation/Navigation.styled';
 
 
 const NotFound = lazy(() => import('../pages/NotFoundPage/NotFoundPage'));
@@ -19,7 +20,7 @@ const Home = lazy(() => import('../pages/Home/Home'));
 //--------------------------------------------------------------//
 export const App = () => {
   return (
-    <div>
+    <Container>
       <GlobalStyle/>
       <Routes>
         <Route path="/goit-react-hw-05-movies/" element={<Navigation />}>
@@ -62,6 +63,6 @@ export const App = () => {
         />
       </Routes>
       <Footer />
-    </div>
+    </Container>
   );
 };
