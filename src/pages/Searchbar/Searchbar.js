@@ -41,6 +41,7 @@ export default function Searchbar() {
       return;
     }
     setSearchParams({ query: query });
+    setQuery('');
   };
 
   return (

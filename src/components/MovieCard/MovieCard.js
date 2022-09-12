@@ -25,7 +25,7 @@ export const MovieCard = ({ movie }) => {
           src={
             poster_path
               ? `https://image.tmdb.org/t/p/w500${poster_path}`
-              : `https://i.gifer.com/origin/3f/3fcf565ccc553afcfd89858c97304705.gif`
+              : `https://i.gifer.com/5h4.gif`
           }
           alt={title ? title : name}
         />

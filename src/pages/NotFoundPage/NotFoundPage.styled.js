@@ -6,8 +6,8 @@ export const NavLinkNotFound = styled(NavLink)`
   text-decoration: none;
   color: #7bd4eb;
   font-size: 25px;
-  font-weight: 500;
-  margin: 10px;
+  font-weight: 200;
+  margin: 20px;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 0 10px 1px #7bd4eb;

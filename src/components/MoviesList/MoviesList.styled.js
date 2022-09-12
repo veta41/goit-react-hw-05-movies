@@ -30,3 +30,9 @@ export const Card = styled.div`
   border-radius: 10px;
   box-shadow: 0 0 10px 1px #7bd4eb;
 `;
+
+export const Img = styled.img`
+  width: 300px;
+  height: 450px;
+  border-radius: 10px;
+`;

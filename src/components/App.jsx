@@ -8,6 +8,7 @@ import { Navigation } from './Navigation/Navigation';
 import  Cast  from './Cast/Cast';
 import  {Reviews}  from './Reviews/Reviews';
 import { Loader } from './Loader/Loader';
+import Footer from './Footer/Footer';
 
 
 const NotFound = lazy(() => import('../pages/NotFoundPage/NotFoundPage'));
@@ -60,6 +61,7 @@ export const App = () => {
           }
         />
       </Routes>
+      <Footer />
     </div>
   );
 };

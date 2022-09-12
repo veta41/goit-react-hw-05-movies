@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Card, List, Title } from './MoviesList.styled';
+import { Card, Img, List, Title } from './MoviesList.styled';
 import { PropTypes } from 'prop-types';
 
 export const MoviesList = ({ moviesList }) => {
@@ -15,15 +15,13 @@ export const MoviesList = ({ moviesList }) => {
                   to={`/goit-react-hw-05-movies/movies/${id}`}
                   state={{ from: location }}
                 >
-                  <img
+                  <Img
                     src={
                       poster_path
                         ? `https://image.tmdb.org/t/p/w500${poster_path}`
-                        : `https://i.gifer.com/origin/3f/3fcf565ccc553afcfd89858c97304705.gif`
+                        : `https://i.gifer.com/5h4.gif`
                     }
                     alt={title ? title : name}
-                    width="300"
-                    height="450"
                   />
                   <Title>{title ? title : name}</Title>
                 </Link>
@@ -42,7 +40,7 @@ MoviesList.propTypes = {
       title: PropTypes.string,
       id: PropTypes.number.isRequired,
       name: PropTypes.string,
-      poster_path: PropTypes.string.isRequired,
+      poster_path: PropTypes.string,
     })
   ),
 };

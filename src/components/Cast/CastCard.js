@@ -10,7 +10,7 @@ export const CastCard = ({ cast }) => {
         src={
           profile_path
             ? `https://image.tmdb.org/t/p/w500${profile_path}`
-            : `https://i.gifer.com/3UXD.gif`
+            : `https://i.gifer.com/5h4.gif`
         }
         alt={name}
       />
