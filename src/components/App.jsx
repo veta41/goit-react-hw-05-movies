@@ -12,7 +12,7 @@ import Footer from './Footer/Footer';
 import { Container } from './Navigation/Navigation.styled';
 
 
-const NotFound = lazy(() => import('../pages/NotFoundPage/NotFoundPage'));
+
 const Searchbar = lazy(() => import('../pages/Searchbar/Searchbar'));
 const MoviesDetails= lazy(() => import('../pages/MoviesDetails/MoviesDetails'));
 const Home = lazy(() => import('../pages/Home/Home'));
