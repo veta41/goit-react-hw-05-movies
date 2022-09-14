@@ -5,8 +5,7 @@ import {
   SearchForm,
   Icon,
   SearchInput,
-  NavLinkSeachBar,
-  TextStyled,
+  Content,
 } from './Searchbar.styled';
 
 import { useSearchParams } from 'react-router-dom';
@@ -45,7 +44,7 @@ export default function Searchbar() {
   };
 
   return (
-    <>
+    <Content>
       <SearchHeader>
         <Header text="SEARCH MOVIES" />
         <SearchForm onSubmit={handlerSubmit}>
@@ -64,16 +63,7 @@ export default function Searchbar() {
           />
         </SearchForm>
       </SearchHeader>
-      {searchFilmList?.length ? (
-        <MoviesList moviesList={searchFilmList} />
-      ) : (
-        <TextStyled>
-          Oooops, page not found
-          <NavLinkSeachBar to="/goit-react-hw-05-movies/">
-            to Home
-          </NavLinkSeachBar>
-        </TextStyled>
-      )}
-    </>
+      {searchFilmList && <MoviesList moviesList={searchFilmList} />}
+    </Content>
   );
 }

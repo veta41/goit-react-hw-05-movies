@@ -17,7 +17,7 @@ const Searchbar = lazy(() => import('../pages/Searchbar/Searchbar'));
 const MoviesDetails= lazy(() => import('../pages/MoviesDetails/MoviesDetails'));
 const Home = lazy(() => import('../pages/Home/Home'));
 
-//--------------------------------------------------------------//
+
 export const App = () => {
   return (
     <Container>
@@ -55,12 +55,10 @@ export const App = () => {
 
         <Route
           path="*"
-          element={
-            <Suspense fallback={<Loader/>}>
-              <NotFound />
-            </Suspense>
-          }
+          element={<NotFound />}
         />
+
+
       </Routes>
       <Footer />
     </Container>

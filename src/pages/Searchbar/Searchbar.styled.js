@@ -2,6 +2,10 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import { MdImageSearch } from 'react-icons/md';
 
+const Content = styled.div`
+  min-height: calc(100vh - 70px);
+`;
+
 const SearchHeader = styled.div`
   display: flex;
   justify-content: center;
@@ -22,6 +26,7 @@ const SearchForm = styled.form`
   background-color: #fff;
   border-radius: 3px;
   overflow: hidden;
+
   &:hover {
     box-shadow: 0 0 13px 3px #7bd4eb;
   }
@@ -54,6 +59,7 @@ const SearchInput = styled.input`
   outline: none;
   padding-left: 4px;
   padding-right: 4px;
+
   &::placeholder {
     font: inherit;
     font-size: 18px;
@@ -84,4 +90,4 @@ export const Icon = styled(MdImageSearch)`
   fill: #7bd4eb;
 `;
 
-export { SearchHeader, SearchBtn, SearchForm, SearchInput };
+export { SearchHeader, SearchBtn, SearchForm, SearchInput, Content };

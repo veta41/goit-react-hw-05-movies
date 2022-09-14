@@ -3,9 +3,7 @@ import { BsGithub } from 'react-icons/bs';
 
 export const FooterContainer = styled.footer`
   display: flex;
-
-  /* margin: 0 auto; */
-  /* padding: 0 16px; */
+  flex-shrink: 0;
 `;
 
 export const FooterData = styled.div`
