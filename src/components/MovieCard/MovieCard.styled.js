@@ -13,6 +13,15 @@ export const Img = styled.img`
   width: 300px;
   border-radius: 10px;
   box-shadow: 0 0 10px 1px #7bd4eb;
+  cursor: pointer;
+  transform: scale(0.9);
+  transition: all 250ms linear;
+
+  &:hover,
+  &:focus {
+    transform: scale(1);
+    box-shadow: 0 0 10px 1px #eb8015;
+  }
 `;
 
 export const MovieH2 = styled.h2`

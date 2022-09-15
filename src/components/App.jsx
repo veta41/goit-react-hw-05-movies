@@ -13,9 +13,11 @@ import { Container } from './Navigation/Navigation.styled';
 
 
 
+
 const Searchbar = lazy(() => import('../pages/Searchbar/Searchbar'));
 const MoviesDetails= lazy(() => import('../pages/MoviesDetails/MoviesDetails'));
 const Home = lazy(() => import('../pages/Home/Home'));
+const NotFound = lazy(() => import('pages/NotFound/NotFound'));
 
 
 export const App = () => {
@@ -23,7 +25,7 @@ export const App = () => {
     <Container>
       <GlobalStyle/>
       <Routes>
-        <Route path="/goit-react-hw-05-movies/" element={<Navigation />}>
+        <Route path="/" element={<Navigation />}>
           <Route
             index
             element={
@@ -33,7 +35,7 @@ export const App = () => {
             }
           />
           <Route
-            path="/goit-react-hw-05-movies/movies"
+            path="/movies"
             element={
               <Suspense fallback={<Loader/>}>
                 <Searchbar />
@@ -41,7 +43,7 @@ export const App = () => {
             }
           />
           <Route
-            path="/goit-react-hw-05-movies/movies/:movieId"
+            path="/movies/:movieId"
             element={
               <Suspense fallback={<Loader/>}>
                 <MoviesDetails />
@@ -55,7 +57,7 @@ export const App = () => {
 
         <Route
           path="*"
-          element={<Home />}
+          element={<NotFound />}
         />
 
 

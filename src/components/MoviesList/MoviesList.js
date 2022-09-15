@@ -12,8 +12,10 @@ export const MoviesList = ({ moviesList }) => {
             <Card>
               <li key={id}>
                 <Link
-                  to={`/goit-react-hw-05-movies/movies/${id}`}
-                  state={{ from: location }}
+                  to={{
+                    pathname: `/movies/${id}`,
+                    state: { from: location },
+                  }}
                 >
                   <Img
                     src={

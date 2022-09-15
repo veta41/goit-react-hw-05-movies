@@ -8,20 +8,10 @@ export const Navigation = () => {
         <nav>
           <List>
             <li>
-              <Link
-                to="/goit-react-hw-05-movies/"
-                className={({ isActive }) => (isActive ? 'active' : '')}
-              >
-                Home
-              </Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <Link
-                to="/goit-react-hw-05-movies/movies"
-                className={({ isActive }) => (isActive ? 'active' : '')}
-              >
-                Movies
-              </Link>
+              <Link to="/movies">Movies</Link>
             </li>
           </List>
         </nav>

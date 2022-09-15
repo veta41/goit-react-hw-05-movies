@@ -29,9 +29,11 @@ export const FooterIcon = styled(BsGithub)`
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  transition: transform var(--animation-duration) var(--timing-function);
+  transform: scale(0.9);
+  transition: all 250ms linear;
+
   &:hover {
-    box-shadow: 0 0 13px 3px #eb700c;
     transform: scale(1.3);
+    box-shadow: 0 0 13px 3px #eb700c;
   }
 `;
