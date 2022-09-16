@@ -13,9 +13,9 @@ export const List = styled.ul`
 export const Title = styled.p`
   display: flex;
   padding: 5px;
-  font-weight: bold;
+  font-size: 25px;
   font-weight: 700;
-  color: #7bd4eb;
+  color: #dce1e3;
   justify-content: center;
   transition: all 250ms linear;
 `;
@@ -37,7 +37,7 @@ export const Card = styled.div`
   &:hover,
   &:focus {
     transform: scale(1);
-    box-shadow: 0 0 10px 1px #eb8015;
+    box-shadow: 0 0 10px 1px #f2820a;
   }
 `;
 

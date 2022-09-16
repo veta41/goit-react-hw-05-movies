@@ -1,8 +1,41 @@
 import styled from 'styled-components';
 
+const sizes = {
+  mobileS: '320px',
+  mobileM: '375px',
+  mobileL: '425px',
+  tablet: '768px',
+  laptop: '1024px',
+  laptopL: '1440px',
+  desktop: '2560px',
+};
+export const devices = {
+  mobileS: `(min-width: ${sizes.mobileS})`,
+  mobileM: `(min-width: ${sizes.mobileM})`,
+  mobileL: `(min-width: ${sizes.mobileL})`,
+  tablet: `(min-width: ${sizes.tablet})`,
+  laptop: `(min-width: ${sizes.laptop})`,
+  laptopL: `(min-width: ${sizes.laptopL})`,
+  desktop: `(min-width: ${sizes.desktop})`,
+};
+
 export const Card = styled.div`
   display: flex;
   gap: 20px;
+  flex-direction: column;
+
+  @media ${devices.laptop} {
+    max-width: 800px;
+    flex-direction: row;
+    align-content: space-between;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media ${devices.desktop} {
+    max-width: 1400px;
+  }
 `;
 
 export const Desc = styled.div`
@@ -36,7 +69,7 @@ export const MovieH3 = styled.h3`
 `;
 
 export const MovieDetail = styled.p`
-  color: #191b1f;
+  color: #dce1e3;
   font-size: 20px;
   font-weight: 400;
 `;

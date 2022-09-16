@@ -1,11 +1,11 @@
 import { PropTypes } from 'prop-types';
-import { Img } from './Cast.styled';
+import { CastCardContain, Img } from './Cast.styled';
 //---------------------------------------------------------------------//
 
 export const CastCard = ({ cast }) => {
   const { character, name, profile_path } = cast;
   return (
-    <>
+    <CastCardContain>
       <Img
         src={
           profile_path
@@ -16,7 +16,7 @@ export const CastCard = ({ cast }) => {
       />
       <h3>{name}</h3>
       <p>Character: {character}</p>
-    </>
+    </CastCardContain>
   );
 };
 

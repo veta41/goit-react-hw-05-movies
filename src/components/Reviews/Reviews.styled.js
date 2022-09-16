@@ -25,5 +25,5 @@ export const ReviewsDescription = styled.p`
   display: flex;
   flex-direction: column;
   font-weight: bold;
-  color: #7bd4eb;
+  color: #dce1e3;
 `;

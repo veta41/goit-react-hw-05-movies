@@ -4,7 +4,9 @@ import styled from 'styled-components';
 export const Container = styled.div`
   margin: 0 auto;
   padding: 0 16px;
-  background-color: #6b6967;
+  /* background-color: #6b6967; */
+
+  background: linear-gradient(to bottom, #051a69 50%, #cee310 50%);
 `;
 
 export const Header = styled.header`

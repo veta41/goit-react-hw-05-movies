@@ -23,18 +23,16 @@ export const MovieH2 = styled.h2`
 
 export const MovieH3 = styled.h3`
   color: #7bd4eb;
+  display: flex;
 `;
 
 export const MovieListDetails = styled.ul`
   display: flex;
   flex-direction: column;
-  align-content: space-between;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
 `;
 
 export const MovieItemDetails = styled.div`
   display: flex;
   gap: 25px;
+  justify-content: center;
 `;
