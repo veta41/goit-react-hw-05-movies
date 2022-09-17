@@ -15,7 +15,7 @@ export const Title = styled.p`
   padding: 5px;
   font-size: 25px;
   font-weight: 700;
-  color: #dce1e3;
+  color: #151a17;
   justify-content: center;
   transition: all 250ms linear;
 `;

@@ -59,7 +59,7 @@ export const FooterIcon = styled(BsGithub)`
 export const FooterSpan = styled.p`
   font-size: 16px;
   font-weight: 600;
-  color: #dce1e3;
+  color: #151a17;
 
   @media ${devices.laptop} {
     font-size: 25px;

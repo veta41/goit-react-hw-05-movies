@@ -69,7 +69,7 @@ export const MovieH3 = styled.h3`
 `;
 
 export const MovieDetail = styled.p`
-  color: #dce1e3;
+  color: #01020d;
   font-size: 20px;
   font-weight: 400;
 `;
